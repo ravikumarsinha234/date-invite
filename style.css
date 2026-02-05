@@ -45,3 +45,38 @@ h1 { font-size: 2em; margin-bottom: 30px; color: #e91e63; }
 #gif { max-width: 300px; margin-top: 20px; }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+        max-width: 90vw;
+    }
+    
+    h1 { 
+        font-size: 1.5em; 
+        line-height: 1.3;
+    }
+    
+    .buttons { 
+        flex-direction: column; 
+        gap: 15px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .btn {
+        padding: 20px 40px;
+        font-size: 1.3em;
+        min-height: 60px; /* Bigger touch target */
+    }
+    
+    #gif { max-width: 250px; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.3em; }
+    .btn { font-size: 1.1em; padding: 18px 30px; }
+}
+
