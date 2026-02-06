@@ -80,3 +80,144 @@ h1 { font-size: 2em; margin-bottom: 30px; color: #e91e63; }
     .btn { font-size: 1.1em; padding: 18px 30px; }
 }
 
+/* Add to your existing CSS */
+
+.hidden { display: none !important; }
+
+.question-section, .form-section, .celebration-section {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.date-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #ffebee;
+    border-radius: 12px;
+    margin: 20px 0;
+    background: #fdf2f8;
+    font-family: inherit;
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: #e91e63;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+.location-options {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.location-options h3 {
+    margin: 0 0 15px 0;
+    color: #e91e63;
+}
+
+.location-options label {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.location-options label:hover {
+    background: #fff3e0;
+    transform: translateX(5px);
+}
+
+.location-options input[type="checkbox"]:checked + span,
+.location-options label:has(input[type="checkbox"]:checked) {
+    background: #e8f5e8;
+    border-color: #4caf50;
+}
+
+textarea#customMsg {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ffebee;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1.1em;
+    background: #fdf2f8;
+    resize: vertical;
+    margin: 20px 0;
+}
+
+textarea#customMsg:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.date-details {
+    background: linear-gradient(135deg, #fff3e0, #fce4ec);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 25px 0;
+    border: 3px dashed #ff9800;
+}
+
+.date-details p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.share-btn {
+    margin-top: 25px;
+    padding: 18px 40px;
+    font-size: 1.3em;
+}
+
+.btn.secondary {
+    background: #757575;
+}
+
+.btn.secondary:hover {
+    background: #616161;
+    transform: scale(1.05);
+}
+
+/* Confetti canvas */
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Enhanced mobile styles */
+@media (max-width: 768px) {
+    .form-buttons, .buttons {
+        flex-direction: column;
+    }
+    
+    .location-options {
+        padding: 15px;
+    }
+    
+    .location-options label {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+}
