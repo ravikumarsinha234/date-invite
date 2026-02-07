@@ -19,7 +19,7 @@
 
         <!-- Date picker section -->
         <div id="datePicker" class="hidden form-section">
-            <h2>Amazing! When are you free? 🌟</h2>
+                <h2 id="dateHeader">Amazing! When are you free, <span id="pickerName">Kavya</span>? 🌟</h2>
             <input type="datetime-local" id="dateInput" class="date-input">
             <div class="location-options">
                 <h3>Where should we go?</h3>
@@ -46,7 +46,7 @@
 
         <!-- Celebration screen -->
         <div id="celebration" class="hidden celebration-section">
-            <h2 id="thankyou">Thank you! 💕</h2>
+            <h2 id="celebrateHeader">It's a DATE with <span id="celebrateName">Kavya</span>! 💕</h2>
             <div id="confetti"></div>
             <img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" alt="Celebration GIF">
             <div id="dateDetails" class="date-details hidden"></div>
@@ -57,7 +57,7 @@
     <!-- Confetti canvas -->
     <canvas id="confettiCanvas"></canvas>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
